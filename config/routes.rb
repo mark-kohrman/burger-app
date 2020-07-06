@@ -3,5 +3,6 @@ Rails.application.routes.draw do
     get "/burgers" => "burgers#index"
     get "/burgers/:id" => "burgers#show"
     post "/burgers" => "burgers#create"
+    patch "/burgers/:id" => "burgers#update"
   end
 end

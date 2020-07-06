@@ -18,4 +18,14 @@ class Api::BurgersController < ApplicationController
     @burger.save
     render 'show.json.jb'
   end
+
+  def update
+    @burger = Burger.find_by(id: params[:id])
+    @burger.update(
+      bun: params[:the_bun],
+      meat: params[:the_meat],
+      price: params[:the_price]
+    )
+    render 'show.json.jb'
+  end
 end
