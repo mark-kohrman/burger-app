@@ -1,0 +1,6 @@
+{
+  id: @burger.id,
+  bun: @burger.bun,
+  meat: @burger.meat,
+  price: @burger.price
+}
