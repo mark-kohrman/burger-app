@@ -8,4 +8,14 @@ class Api::BurgersController < ApplicationController
     @burger = Burger.find_by(id: params[:id])
     render 'show.json.jb'
   end
+
+  def create
+    @burger = Burger.new(
+      bun: params[:bun],
+      meat: params[:meat],
+      price: params[:price]
+    )
+    @burger.save
+    render 'show.json.jb'
+  end
 end
