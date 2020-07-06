@@ -1,0 +1,9 @@
+@burgers.map do |burger|
+
+{
+id: burger.id,
+bun: burger.bun,
+price: burger.price,
+meat: burger.meat  
+}
+end
